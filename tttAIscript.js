@@ -14,13 +14,11 @@ const audio4=new Audio();
 audio4.src="./cute-level-up-3-189853.mp3"
 const audio5=new Audio();
 audio5.src="./game-over-arcade-6435.mp3"
- 
+
 const yesButton = document.getElementById("yes");
 const noButton = document.getElementById("no");
 document.getElementById("yes").addEventListener("click", fadeOutPrompt);
 document.getElementById("no").addEventListener("click", fadeOutPrompt);
-
-
 
 const winConditions = [
     [0, 1, 2],
@@ -40,7 +38,6 @@ startGame();
 
 
 function fadeOutPrompt() {
-    
   promptDiv.style.transition = "opacity 0.5s ease-in-out"; 
   promptDiv.style.opacity = 0;
   setTimeout(() => {
@@ -48,16 +45,14 @@ function fadeOutPrompt() {
   }, 500); 
 }
 function fadeInPrompt(){
-    
   promptDiv.style.transition = "opacity 0.5s ease-in-out"; 
-  promptDiv.style.opacity = 1;
+  promptDiv.style.opacity = 100;
   setTimeout(() => {
       promptDiv.style.display = "block";
   }, 500); 
 }
 function startGame() {
    fadeInPrompt();
-    
     yesButton.addEventListener("click", userStart);
     noButton.addEventListener("click", catBotStart);
     rematchBtn.addEventListener("click", rematch);
@@ -70,25 +65,21 @@ function userStart() {
     currentPlayer = "🐟"; // Fish
     cells.forEach((cell) => cell.addEventListener("click", cellClicked));
 }
- 
+
 function catBotStart() {
     audio1.play();
-    if (options.includes("") && isRunning) {
+    if (options.includes("")) {
         currentPlayer = "🐱";
-       
-        text.innerText = `${currentPlayer} is thinking...`;       
-        setTimeout(() => getCatBotMove(), 1000);
+        text.innerText = `${currentPlayer} is thinking...`;
+        setTimeout(getCatBotMove, 1000);
     }
 }
 
 function getCatBotMove() {
-    if(!isRunning)
-     return;
-
-    const catIndex = getBestMove(); 
-    updateCell(cells[catIndex], catIndex); 
+    const catIndex = getBestMove();
+    updateCell(cells[catIndex], catIndex);
     whoWon();
-} 
+}
 
 function getBestMove() {
     let bestScore = -Infinity;
@@ -98,7 +89,7 @@ function getBestMove() {
         if (options[i] === "") {
             options[i] = "🐱";
             let score = minimax(options, 0, false);
-            options[i] = ""; //UNDO move
+            options[i] = ""; // UNDO move
             if (score > bestScore) {
                 bestScore = score;
                 bestMove = i;
@@ -108,14 +99,12 @@ function getBestMove() {
     return bestMove;
 }
 
+
 function minimax(board, depth, isMaximizing) {
     const winner = checkWinner(board);
-    if (winner === "🐱") 
-      return 1; 
-    if (winner === "🐟") 
-      return -1;
-    if (!board.includes(""))
-       return 0; //Tie
+    if (winner === "🐱") return 1;
+    if (winner === "🐟") return -1;
+    if (!board.includes("")) return 0; // Tie
 
     if (isMaximizing) {
         let bestScore = -Infinity;
@@ -123,24 +112,25 @@ function minimax(board, depth, isMaximizing) {
             if (board[i] === "") {
                 board[i] = "🐱";
                 let score = minimax(board, depth + 1, false);
-                board[i] = ""; //UNDO move
+                board[i] = ""; // UNDO move
                 bestScore = Math.max(score, bestScore);
             }
         }
         return bestScore;
-    } else { 
+    } else {
         let bestScore = Infinity;
         for (let i = 0; i < 9; i++) {
             if (board[i] === "") {
                 board[i] = "🐟";
                 let score = minimax(board, depth + 1, true);
-                board[i] = ""; //UNDO move
+                board[i] = ""; // UNDO move
                 bestScore = Math.min(score, bestScore);
             }
         }
         return bestScore;
     }
 }
+
 
 function cellClicked() {
     const cindex = this.getAttribute("cellIndex");
@@ -152,10 +142,12 @@ function cellClicked() {
 }
 
 function updateCell(cell, index) {
+
     if(currentPlayer==="🐱")
-     audio3.play();
-    else
-     audio2.play();
+        audio3.play();
+       else
+        audio2.play();
+   
 
     options[index] = currentPlayer;
     cell.innerText = currentPlayer;
@@ -168,7 +160,7 @@ function changePlayer() {
     if (currentPlayer === "🐱") {
         catBotStart();
     }
-} 
+}
 
 function whoWon() {
     const winner = checkWinner(options);
@@ -190,21 +182,21 @@ function whoWon() {
 
 function checkWinner(board) {
     for (const condition of winConditions) {
-        const positions = condition;
-        if (board[positions[0]]==board[positions[1]]&&board[positions[2]]==board[positions[1]]) {
-            return board[positions[0]]; //we returnin the winner
+        const [a, b, c] = condition;
+        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+            return board[a]; // We return the winner
         }
     }
-    return null; //No winner yet
+    return null; // No winner yet
 }
 
+
 function rematch() {
-audio1.play();
+    audio1.play();
   options = ["", "", "", "", "", "", "", "", ""];
   cells.forEach((cell) => (cell.textContent = ""));
   promptDiv.style.display = "block";
   text.innerText = ""; 
   startGame();
-  
 }
 
