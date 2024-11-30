@@ -20,7 +20,7 @@ This project implements an unbeatable Tic-Tac-Toe bot using the Minimax algorith
 
 1. Clone the repository to your local machine:
    
-   git clone [https://github.com/yourusername/unbeatable-tictactoe-cat-bot.git](https://github.com/ADR-projects/Unbeatable-TicTacToe--CatBot.git)
+   git clone [https://github.com/ADR-projects/Unbeatable-TicTacToe--CatBot.git](https://github.com/ADR-projects/Unbeatable-TicTacToe--CatBot.git)
 
 2. Navigate to the project directory:
    cd unbeatable-tictactoe-cat-bot
