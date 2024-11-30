@@ -9,9 +9,12 @@ This project implements an unbeatable Tic-Tac-Toe bot using the Minimax algorith
 ## Features
 
 - **Unbeatable Bot**: Uses the Minimax algorithm to ensure that the bot is always unbeatable.
-- **Fun Theme**: Play as a cat against a fish, adding a playful twist to the traditional noughts and crosses.
+- **Fun Theme**: Play as a fish against a cat, adding a playful twist to the traditional noughts and crosses.
 - **Clean Interface**: User-friendly design with smooth interactions.
 - **Responsive Layout**: Optimized for both desktop and mobile devices.
+  
+## Screenshot!: 
+[TicTacToe](https://github.com/ADR-projects/Unbeatable-TicTacToe--CatBot/blob/main/Unbeatable%20CatBot%20TTT%20screenshot.png)
 
 ## Getting Started
 
