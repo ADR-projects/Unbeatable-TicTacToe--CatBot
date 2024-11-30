@@ -1,0 +1,159 @@
+body {
+  margin: 0 auto;
+  background-image: url(https://i.pinimg.com/564x/fd/39/12/fd39126c1744e7c9fe900d8da031b1d7.jpg);
+  height: 100%;
+  background-position: center;
+  background-color: rgb(7, 31, 30);
+  background-repeat: no-repeat;
+  min-height: 100%;
+  max-width: 25em;
+}
+#yes-no-radio {
+  background-image: url(https://petitspixels.com/blg/wp-content/uploads/2019/09/cute-black-cat-fish-bones-pattern-by-petitspixels.png);
+  background-position: center;
+  margin: 0 auto;
+  margin-top: 1em;
+  min-height: 100%;
+  min-width: 100%;
+  text-align: center;
+  padding: 1em;
+  border: white 1px solid;
+  border-radius: 0%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+#msg {
+  background-color: rgb(207, 248, 255);
+  color: rgb(14, 70, 110);
+  padding:0.4em;
+  border-radius:15px;
+  width: 8.5em;
+  margin: 0 auto;
+  margin-top: 11em;
+  
+  font-family: Arial, Helvetica, sans-serif;
+}
+#yes,
+#no {
+  margin-top: 1em;
+  border: solid 2px rgb(255, 255, 255);
+  height: 3rem;
+  width: 5em;
+  font-size: 23px;
+  color: rgba(126, 11, 11, 0.918);
+  font-weight: bold;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(201, 255, 8, 0.795),
+    rgba(255, 136, 0, 0.801)
+  );
+  border-radius: 15px;
+  margin-bottom:11em;
+}
+#yes{
+  margin-right:10px;
+}
+
+.cell {
+  width: 75px;
+  height: 75px;
+  border: solid 4px rgb(163, 60, 0);
+
+  border-radius: 6%;
+  box-shadow: 0 0 0 1.5px;
+  line-height: 75px;
+  font-size: 40px;
+  cursor: pointer;
+}
+#gamecontainer {
+  
+  width: 75%;
+  height: 85%;
+  margin: auto;
+  margin-bottom: -1em;
+  margin-top:2em;
+  padding:1em;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  
+}
+
+footer {
+  font-size: smaller;
+  color: rgba(255, 255, 255, 0.568);
+  margin-bottom: 0;
+  margin-top: 1.2em;
+}
+h1 {
+  color: rgb(8, 0, 0);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 8px;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(255, 216, 88, 0.815);
+
+  width: 70%;
+  padding: auto;
+  border-radius: 6%;
+  margin: auto;
+  margin-top: 10px;
+}
+#Text {
+  padding: 12px;
+  margin: 12px auto;
+  border: 1.6px solid rgb(248, 255, 157);
+  width: 75%;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 248, 245, 0.644);
+}
+#rematchButton {
+  border: solid 2px rgb(0, 0, 0);
+  height: 3rem;
+  width: 11em;
+  font-size: 23px;
+  color: rgba(126, 11, 11, 0.918);
+  font-weight: bold;
+  cursor: pointer;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(213, 252, 75),
+    rgb(255, 136, 0)
+  );
+}
+/**#npButton{
+    background-image: linear-gradient(to bottom right, rgb(145, 215, 243), rgba(28, 243, 125, 0.808));
+
+}**/
+#cellsGrid {
+  background-color: rgba(205, 232, 250, 0.644);
+
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 245px;
+  margin: auto;
+}
+#vs {
+  background-color: rgba(250, 255, 201, 0.644);
+  letter-spacing: 2px;
+  height: auto;
+  padding: auto;
+  width: 75%;
+  margin: auto;
+  font-weight: lighter;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(82, 9, 9);
+  /**background-image: url(https://i.pinimg.com/564x/e8/58/61/e858610a344b408daafbc8c93ca14f49.jpg);
+     opacity: 89%;
+     border-radius: 5%;
+     **/
+}
+a {
+  color: rgba(255, 187, 0, 0.925);
+}
