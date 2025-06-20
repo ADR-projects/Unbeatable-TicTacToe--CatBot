@@ -16,13 +16,4 @@ This project implements an unbeatable Tic-Tac-Toe bot using the Minimax algorith
 ## Screenshot!: 
 [TicTacToe](https://github.com/ADR-projects/Unbeatable-TicTacToe--CatBot/blob/main/Unbeatable%20CatBot%20TTT%20screenshot.png)
 
-## Getting Started
-
-1. Clone the repository to your local machine:
-   
-   git clone [https://github.com/ADR-projects/Unbeatable-TicTacToe--CatBot.git](https://github.com/ADR-projects/Unbeatable-TicTacToe--CatBot.git)
-
-2. Navigate to the project directory:
-   cd unbeatable-tictactoe-cat-bot
-
-4. Open index.html in your favourite web browser and start playing!
+## Link to play: [https://unbeat-fish-cat-toe.vercel.app/](https://unbeat-fish-cat-toe.vercel.app/)
