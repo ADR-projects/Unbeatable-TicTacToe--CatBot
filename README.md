@@ -4,7 +4,7 @@ Welcome to the Unbeatable Tic-Tac-Toe game featuring the epic showdown between C
 
 ### Description
 
-This project implements an unbeatable Tic-Tac-Toe bot using the Minimax algorithm, where you play as the fish 🐟 and try to outsmart a cat 🐱.
+This project implements an unbeatable Tic-Tac-Toe bot using the **Minimax algorithm**, where you play as the fish 🐟 and try to outsmart a cat 🐱.
 Challenge yourself against the algorithm designed to always win or draw, and experience the strategic depth of a classic game with a whimsical twist.
 
 ### Features
@@ -14,7 +14,7 @@ Challenge yourself against the algorithm designed to always win or draw, and exp
 - **Clean Interface**: User-friendly design with smooth interactions.
 - **Responsive Layout**: Optimized for both desktop and mobile devices.
   
-### Screenshot!: 
+### Screenshot: 
 [TicTacToe](https://github.com/ADR-projects/Unbeatable-TicTacToe--CatBot/blob/main/Unbeatable%20CatBot%20TTT%20screenshot.png)
 
 ### Link to play: 
